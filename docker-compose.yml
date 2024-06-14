@@ -1,0 +1,16 @@
+version: "3"
+services:
+  node:
+    image: node:16.14.2
+    user: node
+    container_name: battles_and_dragons
+    tty: true
+    stdin_open: true
+    command: bash
+    restart: always
+    working_dir: /app
+    volumes:
+      - ./:/app
+networks:
+  default:
+    name: battles_and_dragons_net
